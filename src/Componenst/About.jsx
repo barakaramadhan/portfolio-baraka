@@ -2,7 +2,7 @@ import Hero from "./Hero";
 
 export default function About() {
   return (
-    <section className="bg-[#514E3D] -mt-[100px]">
+    <section id="About" className="bg-[#514E3D] -mt-[100px]">
       {/* pembukaan about */}
       <div className="flex justify-center pt-[50px] gap-2 pb-[5px]">
         <h1 className="font-bebas text-[30px] bg-[#191C0C] px-2 text-white">Hello</h1>

@@ -62,7 +62,7 @@ export default function Skil(){
             {/* skill Container yang Diberi Logika Geser */}
             <div 
                 ref={containerRef} // Dapatkan referensi DOM
-                className="mb-[10px] flex overflow-x-scroll pb-[100px] px-4 select-none" // Tambahkan overflow-x-scroll dan select-none
+                className="mb-[100px] flex overflow-x-scroll  px-4 select-none" // Tambahkan overflow-x-scroll dan select-none
                 // Event Handlers
                 onMouseDown={handleMouseDown}
                 onMouseLeave={handleMouseEnd}

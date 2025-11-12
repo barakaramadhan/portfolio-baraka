@@ -1,36 +1,139 @@
+import { useState, useEffect } from "react";
+import Hitam from "../Assets/img/Hitam.png";
+
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const [showBar, setShowBar] = useState(false);
+
+   useEffect(() => {
+    const handleScroll = () => {
+      setShowBar(window.scrollY > 50); // muncul setelah scroll 50px
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 ">
-      <div className="bg-[#191C0C]/90 text-white flex items-center justify-center gap-[60px] h-[70px] w-[350px] rounded-[50px] shadow-lg">
-        {/* Home */}
-        <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="cursor-pointer hover:scale-125 transition-all duration-300">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M19 8.71l-5.333 -4.148a2.666 2.666 0 0 0 -3.274 0l-5.334 4.148a2.665 2.665 0 0 0 -1.029 2.105v7.2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-7.2c0 -.823 -.38 -1.6 -1.03 -2.105" />
-          <path d="M16 15c-2.21 1.333 -5.792 1.333 -8 0" />
-        </svg>
-        </a>
+    <nav className={`z-50 fixed top-0 left-0 w-full pb-2 transition-all duration-500 ${
+        showBar ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
+      } bg-[#D1CBB2]/90`}>
+      {/* Header atas */}
+      <div className="flex justify-between px-5 pt-5 items-center md:px-[35px] md:pt-[35px]">
+        <div className="flex items-center gap-3">
+          <img src={Hitam} alt="logo" className="w-[30px] md:w-[40px]" />
+          <h1 className="font-bebas text-[30px] text-[#191C0C]">BARAKA</h1>
+        </div>
 
-        {/* About */}
-        <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="cursor-pointer hover:scale-125 transition-all duration-300">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
-          <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-        </svg>
-        </a>
+        {/* Tombol menu (hanya muncul di mobile) */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="block md:hidden -mt-[5px]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 6l16 0" />
+            <path d="M4 12l16 0" />
+            <path d="M4 18l16 0" />
+          </svg>
+        </button>
 
-        {/* Contact */}
-        <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="cursor-pointer hover:scale-125 transition-all duration-300">
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
-        </svg>
-        </a>
+        {/* Navigasi biasa untuk layar md ke atas */}
+        <ul className="hidden md:flex gap-10 mr-5 ">
+          <li className="hover:scale-110 transform transition duration-300">
+            <a
+              href="#Home"
+              className="font-bebas text-[30px] text-[#191C0C] "
+            >
+              HOME
+            </a>
+          </li>
+          <li className="hover:scale-110 transform transition duration-300">
+            <a
+              href="#About"
+              className="font-bebas text-[30px] text-[#191C0C] "
+            >
+              ABOUT
+            </a>
+          </li>
+          <li className="hover:scale-110 transform transition duration-300">
+            <a
+              href="#Contact"
+              className="font-bebas text-[30px] text-[#191C0C]"
+            >
+              CONTACT
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      {/* Sidebar mobile */}
+      <div
+        className={`fixed top-0 right-0 w-[300px] h-screen bg-[#FE8425] transition-transform duration-500 ease-in-out md:hidden ${
+          open ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Tombol close */}
+        <div className="flex justify-end p-5">
+          <button onClick={() => setOpen(false)}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="35"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="icon icon-tabler icons-tabler-outline icon-tabler-x"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M18 6l-12 12" />
+              <path d="M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Isi navigasi (hanya mobile) */}
+        <div className="flex flex-col items-center mt-10 gap-5">
+          <div className="flex gap-3 md:hidden">
+            <img src={Hitam} alt="img" className="w-[50px]" />
+            <div className="font-bebas text-[45px] text-black">BARAKA</div>
+          </div>
+
+          <ul className="mt-10 space-y-2">
+            <li className="hover:scale-110 transform transition duration-300">
+              <a href="#Home" 
+                  onClick={() => setOpen(false)}  className="font-bebas text-[70px] text-white">
+                HOME
+              </a>
+            </li>
+            <li className="hover:scale-110 transform transition duration-300">
+              <a href="#About"  
+              onClick={() => setOpen(false)} className="font-bebas text-[65px] text-white">
+                ABOUT
+              </a>
+            </li>
+            <li className="hover:scale-110 transform transition duration-300">
+              <a href="#Contact" className="font-bebas text-[60px] text-white">
+                CONTACT
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
-  )
+  );
 }

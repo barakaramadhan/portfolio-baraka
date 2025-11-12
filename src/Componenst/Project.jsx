@@ -33,11 +33,12 @@ export default function Project() {
   ];
 
   return (
-    <div className="bg-[#434537] rounded-t-[10px] min-h-screen py-10">
+    <div className="bg-[#434537] py-10">
       <h1 className="font-bebas text-[40px] text-white text-center pt-[30px]">
         DARI IDE JADI{" "}
         <span className="bg-[#FE8425] px-1 py-0">REALITA</span>
       </h1>
+      <h2 className="text-center font-poppins text-white text-[15px]">Beberapa Project Yang Berhasil Saya Buat</h2>
 
       {/* SLIDER */}
       <div className="mt-10 px-8">
