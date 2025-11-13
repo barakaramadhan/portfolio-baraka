@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import Figma from "../Assets/img/Figma.png";
+import  Design from "../Assets/img/design.png";
 import Tailwind from "../Assets/img/Tailwind.png";
 import ReactLogo from "../Assets/img/reactLogo.png";
 import CssLogo from "../Assets/img/cssLogo.png";
@@ -8,7 +8,7 @@ import HtmlLogo from "../Assets/img/htmlLogo.png";
 // Data skill
 const skillData = [
   { name: 'TAILWIND', logo: Tailwind, width: 'h-[45px]' },
-  { name: 'FIGMA', logo: Figma, width: 'w-[45px] h-[45px]' },
+  { name: 'FIGMA', logo: Design, width: 'w-[45px] h-[45px]' },
   { name: 'REACT', logo: ReactLogo, width: 'w-[45px] h-[45px]' },
   { name: 'CSS', logo: CssLogo, width: 'w-[45px] h-[45px]' },
   { name: 'HTML', logo: HtmlLogo, width: 'w-[45px] h-[45px]' },
