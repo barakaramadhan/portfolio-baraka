@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import  Design from "../Assets/img/design.png";
-import Tailwind from "../Assets/img/Tailwind.png";
+import Tailwind from "../Assets/img/tailwind.png";
 import ReactLogo from "../Assets/img/reactLogo.png";
 import CssLogo from "../Assets/img/cssLogo.png";
 import HtmlLogo from "../Assets/img/htmlLogo.png";
