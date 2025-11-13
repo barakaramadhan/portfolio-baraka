@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 
 import BreadPapas from "../Assets/img/breadpapas.png";
 import Slicing from "../Assets/img/slicing.png";
-import ApkPelanggaran from "../Assets/img/apkPelanggaran.png";
+import PelanggaranBahasa from "../Assets/img/pelanggaranBahasa.png";
 import Eid from "../Assets/img/eid.png"; // 🆕 Tambahan gambar baru
 
 export default function Project() {
@@ -21,7 +21,7 @@ export default function Project() {
       desc: "Hanya slicing biasa, cuma buat ngasah skill ajaa.",
     },
     {
-      img: ApkPelanggaran,
+      img: PelanggaranBahasa,
       title: "APK BAHASA",
       desc: "Aplikasi Pelanggaran Siswa berbasis Android.",
     },
