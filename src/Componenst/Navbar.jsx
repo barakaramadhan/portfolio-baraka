@@ -54,6 +54,7 @@ export default function Navbar() {
           <li className="hover:scale-110 transform transition duration-300">
             <a
               href="#Home"
+              
               className="font-bebas text-[30px] text-[#191C0C] "
             >
               HOME
@@ -62,6 +63,7 @@ export default function Navbar() {
           <li className="hover:scale-110 transform transition duration-300">
             <a
               href="#About"
+              onClick={() => setOpen(false)}
               className="font-bebas text-[30px] text-[#191C0C] "
             >
               ABOUT
@@ -127,7 +129,8 @@ export default function Navbar() {
               </a>
             </li>
             <li className="hover:scale-110 transform transition duration-300">
-              <a href="#Contact" className="font-bebas text-[60px] text-white">
+              <a href="#Contact"
+                onClick={() => setOpen(false)} className="font-bebas text-[60px] text-white">
                 CONTACT
               </a>
             </li>

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Kece from "../Assets/img/Kece.png";
 import Kotak from "../Assets/img/Kotak.png";
 import Badon from "../Assets/img/Badon.png";
@@ -13,11 +14,24 @@ export default function Hero() {
     </h1>
     <img src={Badon} alt="" className="w-[400px]  absolute z-10 max-sm:hidden" />
 
-    <div className="md:bg-[#FE8425] md:pt-[45px] md:h-[120px] md:px-[30px] md:-mt-[50px] md:mb-[50px] md:rotate-[7deg] md:z-20 ">
-       <h1 className="font-bebas text-[100px] text-[#434537] font-semibold -mt-[70px] md:text-[120px] md:text-white">
-      RAMADHAN
-    </h1>
-    </div>
+   <div
+  className="
+    md:animate-goyang
+    md:bg-[#FE8425] md:pt-[45px] md:h-[120px]
+    md:px-[30px] md:-mt-[50px] md:mb-[50px]
+    md:rotate-[7deg] md:z-20 inline-block
+  "
+>
+  <h1
+    className="
+      font-bebas text-[100px] text-[#434537] font-semibold -mt-[70px]
+      md:text-[120px] md:text-white
+      animate-goyangMobile md:animate-none
+    "
+  >
+    RAMADHAN
+  </h1>
+</div>
      
   </div>
 
