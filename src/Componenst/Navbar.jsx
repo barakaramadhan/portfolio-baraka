@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Hitam from "../Assets/img/Hitam.png";
+import Logoo from "../Assets/img/logoo.png";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -21,7 +21,7 @@ export default function Navbar() {
       {/* Header atas */}
       <div className="flex justify-between px-5 pt-5 items-center md:px-[35px] md:pt-[35px]">
         <div className="flex items-center gap-3">
-          <img src={Hitam} alt="logo" className="w-[30px] md:w-[40px]" />
+          <img src={Logoo} alt="logo" className="w-[30px] md:w-[40px]" />
           <h1 className="font-bebas text-[30px] text-[#191C0C]">BARAKA</h1>
         </div>
 
@@ -111,7 +111,7 @@ export default function Navbar() {
         {/* Isi navigasi (hanya mobile) */}
         <div className="flex flex-col items-center mt-10 gap-5">
           <div className="flex gap-3 md:hidden">
-            <img src={Hitam} alt="img" className="w-[50px]" />
+            <img src={Logoo} alt="img" className="w-[50px]" />
             <div className="font-bebas text-[45px] text-black">BARAKA</div>
           </div>
 
