@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Kece from "../Assets/img/Kece.png";
-import Kotak from "../Assets/img/Kotak.png";
+import Koma from "../Assets/img/koma.png";
 import Badon from "../Assets/img/Badon.png";
 
 
@@ -39,8 +39,8 @@ export default function Hero() {
 
     <div className="flex flex-col justify-center ml-[10px] mt-[10px] md:-ml-[80px] ">
         <div className="flex gap-1 mb-1">
-            <img src={Kotak} alt="" className="w-[10px] h-[10px]" />
-            <img src={Kotak} alt="" className="w-[10px] h-[10px]"/>
+            <img src={Koma} alt="" className="w-[10px] h-[10px]" />
+            <img src={Koma} alt="" className="w-[10px] h-[10px]"/>
         </div>
 
         <div>
