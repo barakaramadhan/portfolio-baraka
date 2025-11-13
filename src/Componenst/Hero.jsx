@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import Kece from "../Assets/img/Kece.png";
 import Koma from "../Assets/img/koma.png";
-import Badon from "../Assets/img/Badon.png";
+import User from "../Assets/img/User.png";
 
 
 export default function Hero() {
@@ -12,7 +11,7 @@ export default function Hero() {
     <h1 className="font-bebas text-[120px] text-[#191C0C] font-semibold md:text-[250px] relative">
       BARAKA
     </h1>
-    <img src={Badon} alt="" className="w-[400px]  absolute z-10 max-sm:hidden" />
+    <img src={User} alt="" className="w-[400px]  absolute z-10 max-sm:hidden" />
 
    <div
   className="
@@ -35,7 +34,6 @@ export default function Hero() {
      
   </div>
 
-   <div><img src={Kece} alt="img" className="hidden"/></div>
 
     <div className="flex flex-col justify-center ml-[10px] mt-[10px] md:-ml-[80px] ">
         <div className="flex gap-1 mb-1">
