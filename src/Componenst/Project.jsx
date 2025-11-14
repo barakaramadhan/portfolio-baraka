@@ -20,19 +20,19 @@ export default function Project() {
       img: Webs,
       title: "SLICING",
       desc: "Hanya slicing biasa, cuma buat ngasah skill ajaa.",
-      link: "https://github.com/baraka/slicing",
+      link: "https://tinyurl.com/Slicing-web",
     },
     {
       img: Bahasa,
       title: "APK BAHASA",
       desc: "Aplikasi Pelanggaran Siswa berbasis Android.",
-      link: "https://play.google.com/store/apps/details?id=apk.bahasa",
+      link: "https://tinyurl.com/pelanggaraan",
     },
     {
       img: Mubarok,
       title: "EID MUBAROK",
       desc: "Website bertema Idul Fitri dengan sistem dark dan light mode.",
-      link: "https://eidmubarok.vercel.app",
+      link: "https://tinyurl.com/eid-mubarok",
     },
   ];
 

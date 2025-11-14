@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react';
-import  Design from "../Assets/img/design.png";
+import React from 'react';
+import Design from "../Assets/img/design.png";
 import Tailwind from "../Assets/img/tailwind.png";
 import ReactLogo from "../Assets/img/reactLogo.png";
 import CssLogo from "../Assets/img/cssLogo.png";
@@ -15,78 +15,61 @@ const skillData = [
 ];
 
 export default function Skil() {
-  const containerRef = useRef(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-
-  const handleMouseDown = (e) => {
-    if (!containerRef.current) return;
-    setIsDragging(true);
-    setStartX(e.pageX - containerRef.current.offsetLeft);
-    setScrollLeft(containerRef.current.scrollLeft);
-    containerRef.current.style.cursor = 'grabbing';
-  };
-
-  const handleMouseEnd = () => {
-    if (!containerRef.current) return;
-    setIsDragging(false);
-    containerRef.current.style.cursor = 'grab';
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDragging || !containerRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX) * 1.5;
-    containerRef.current.scrollLeft = scrollLeft - walk;
-  };
-
   return (
-    <div className="bg-[#D1CBB2] pt-[80px] sm:pt-[60px] md:pt-[150px] md:pb-[150px] overflow-hidden">
-      {/* Judul */}
-      <div className="px-4 pb-[25px] sm:pb-[30px] md:pb-[40px]">
-        <h1 className="text-center font-bebas text-[40px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-[#191C0C]">
-          SKILL GUA, <span className="text-white bg-[#FE8425] px-1 py-0">GAYA GUA</span>
-        </h1>
-      </div>
+    <div className="bg-[#D1CBB2] text-white py-[80px] px-4">
 
-      {/* Container Skill Scroll */}
-      <div
-        ref={containerRef}
-        className="flex overflow-x-auto gap-5 sm:gap-6 md:gap-8 px-4 pb-[100px] select-none scrollbar-hide"
-        onMouseDown={handleMouseDown}
-        onMouseLeave={handleMouseEnd}
-        onMouseUp={handleMouseEnd}
-        onMouseMove={handleMouseMove}
-        style={{
-          cursor: 'grab',
-          WebkitOverflowScrolling: 'touch',
-          scrollbarWidth: 'none',
-        }}
-      >
-        {skillData.map((skill, index) => (
-          <div key={index} className="flex-shrink-0">
+      {/* JUDUL */}
+      <h1 className="text-center text-[50px] sm:text-[40px] md:text-[80px] font-bebas text-[#514E3D]">
+       <span className='bg-[#FE8425] px-2 py-0.5 text-white'>KEAHLIAN</span> SAYA
+      </h1>
+
+      <p className="text-center text-black font-poppins max-w-[700px] mx-auto mt-3 text-[15px] sm:text-[15px] md:text-[16px] leading-relaxed">
+       Gua nguasain beberapa tools dan teknologi yang bikin proses desain & ngoding jadi lebih cepat dan rapi.
+      </p>
+
+      <div className="flex flex-col items-center md:flex-row md:justify-center gap-10 mt-[60px]">
+
+        {/* TEXT SKILLS — RESPONSIVE */}
+        <div className="flex items-center -mt-[50px] sm:-mt-[50px] md:-mt-[50px] lg:-mt-[50px] xl:-mt-[50px]">
+        </div>
+
+        {/* GRID RESPONSIVE */}
+        <div
+          className="
+            grid
+            grid-cols-2
+            sm:grid-cols-3
+            md:grid-cols-3
+            lg:grid-cols-4
+            xl:grid-cols-5
+            gap-6 sm:gap-8 md:gap-10
+          "
+        >
+          {skillData.map((skill, index) => (
             <div
+              key={index}
               className="
-                bg-[#514E3D]
-                flex flex-col items-center justify-center
-                rounded-xl rounded-br-none text-white shadow-2xl
-                transition-transform hover:scale-105 duration-300
-                w-[140px] h-[160px] 
-                sm:w-[170px] sm:h-[190px] 
-                md:w-[230px] md:h-[250px] 
-                lg:w-[280px] lg:h-[300px] 
-                xl:w-[320px] xl:h-[340px]
+                bg-[#191C0C]
+                w-[130px] h-[130px]
+                sm:w-[150px] sm:h-[150px]
+                md:w-[170px] md:h-[170px]
+                lg:w-[190px] lg:h-[190px]
+                rounded-2xl shadow-xl
+                flex flex-col justify-center items-center
+                hover:scale-105 transition duration-300
               "
             >
-              <img src={skill.logo} alt={skill.name} className={`${skill.width}`} />
-              <h1 className="font-bebas text-[20px] sm:text-[24px] md:text-[30px] lg:text-[36px] text-center pt-[10px]">
+              <img
+                src={skill.logo}
+                alt={skill.name}
+                className={`${skill.width}`}
+              />
+              <h1 className="text-[20px] font-bebas sm:text-[18px] md:text-[30px] mt-3 tracking-wide">
                 {skill.name}
               </h1>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

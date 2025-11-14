@@ -78,10 +78,10 @@ export default function Contact() {
           className="text-center md:text-left flex-1"
         >
           <h1 className="font-bebas text-[36px] md:text-[48px] text-[#514E3D] leading-tight">
-            Chat Aja <span className="bg-[#FE8425] px-1 text-white">Kalau Perlu</span>
+           Mari  <span className="bg-[#FE8425] px-1 text-white">Terhubung</span>
           </h1>
           <p className="text-sm md:text-base opacity-90 font-poppins text-[#4A4A4A] mt-2">
-            Jadilah Orang Pertama Yang Menghubungi Saya.
+          Mau tanya-tanya, kerja bareng, atau sekadar ngobrol? Tinggal isi form-nya, gua fast respon!
           </p>
         </motion.div>
 

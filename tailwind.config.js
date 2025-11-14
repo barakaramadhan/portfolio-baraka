@@ -25,7 +25,7 @@ export default {
         },
       },
       animation: {
-        goyang: "goyang 1s linear infinite",
+        goyang: "goyang 1.5s linear infinite",
         goyangMobile: "goyangMobile 1.5s linear infinite",
       },
     },
