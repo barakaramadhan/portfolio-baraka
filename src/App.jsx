@@ -4,6 +4,7 @@ import About from "./Componenst/About";
 import Skil from "./Componenst/Skill";
 import Project from "./Componenst/Project";
 import Contact from "./Componenst/Contact";
+import Footer from "./Componenst/Footer";
 
 
 
@@ -17,6 +18,7 @@ export default function () {
       <Skil />
       <Project />
       <Contact />
+      <Footer />
       </>
   );
 }

@@ -43,7 +43,7 @@ export default function Skil() {
   };
 
   return (
-    <div className="bg-[#D1CBB2] pt-[40px] sm:pt-[60px] md:pt-[80px] overflow-hidden">
+    <div className="bg-[#D1CBB2] pt-[80px] sm:pt-[60px] md:pt-[150px] md:pb-[150px] overflow-hidden">
       {/* Judul */}
       <div className="px-4 pb-[25px] sm:pb-[30px] md:pb-[40px]">
         <h1 className="text-center font-bebas text-[40px] sm:text-[40px] md:text-[50px] lg:text-[60px] text-[#191C0C]">
@@ -54,7 +54,7 @@ export default function Skil() {
       {/* Container Skill Scroll */}
       <div
         ref={containerRef}
-        className="flex overflow-x-auto gap-5 sm:gap-6 md:gap-8 px-4 pb-[90px] select-none scrollbar-hide"
+        className="flex overflow-x-auto gap-5 sm:gap-6 md:gap-8 px-4 pb-[100px] select-none scrollbar-hide"
         onMouseDown={handleMouseDown}
         onMouseLeave={handleMouseEnd}
         onMouseUp={handleMouseEnd}

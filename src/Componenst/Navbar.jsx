@@ -63,7 +63,6 @@ export default function Navbar() {
           <li className="hover:scale-110 transform transition duration-300">
             <a
               href="#About"
-              onClick={() => setOpen(false)}
               className="font-bebas text-[30px] text-[#191C0C] "
             >
               ABOUT
