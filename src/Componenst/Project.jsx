@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import Roti from "../Assets/img/roti.png";
-import Webs from "../Assets/img/Webs.png";
+import Webs from "../Assets/img/webs.png";
 import Bahasa from "../Assets/img/bahasa.png";
 import Mubarok from "../Assets/img/mubarok.png";
 
