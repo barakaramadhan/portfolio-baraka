@@ -1,7 +1,7 @@
 import Badoon from "../Assets/img/badoon.png";
 export default function About() {
   return (
-    <section id="About" className="bg-[#514E3D] -mt-[100px] md:pt-[50px] md:pb-[50px]">
+    <section id="About" className="bg-[#514E3D] -mt-[100px] md:pt-[50px] md:pb-[50px] md:-mt-[200px]">
       <div className="md:flex md:items-center ">
            {/* img about */}
     <div>

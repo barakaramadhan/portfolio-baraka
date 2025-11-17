@@ -5,7 +5,7 @@ import User from "../Assets/img/User.png";
 
 export default function Hero() {
   return (
-  <div id="Home" className="flex justify-center items-center bg-[#D1CBB2] h-screen flex-col max-sm:mb-[100px]  md:mt-0 md:mb-[100px] md:h-screen">
+  <div id="Home" className="flex justify-center items-center bg-[#D1CBB2] h-screen flex-col max-sm:mb-[100px]  md:mt-0 md:mb-[200px] md:h-screen">
     
   <div className="flex flex-col items-center ">
     <h1 className="font-bebas text-[120px] text-[#191C0C] font-semibold md:text-[250px] relative">
