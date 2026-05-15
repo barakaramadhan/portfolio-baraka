@@ -7,6 +7,7 @@ import Roti from "../Assets/img/roti.png";
 import Webs from "../Assets/img/webs.png";
 import Bahasa from "../Assets/img/bahasa.png";
 import Mubarok from "../Assets/img/mubarok.png";
+import Cuaca from "../Assets/img/cuaca.png";
 
 export default function Project() {
   const projects = [
@@ -34,6 +35,12 @@ export default function Project() {
       desc: "Website bertema Idul Fitri dengan sistem dark dan light mode.",
       link: "https://tinyurl.com/eid-mubarok",
     },
+    {
+      img: Cuaca,
+      title: "WEATHER APP",
+      desc: "Aplikasi cuaca sederhana menggunakan API.",
+      link: "https://wheather-app-git-main-barakaramadhan444-1812s-projects.vercel.app/",
+    }
   ];
 
   return (
