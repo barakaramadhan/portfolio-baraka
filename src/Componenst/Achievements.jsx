@@ -30,7 +30,7 @@ export default function Achievement() {
     title: "UI/UX Designer",
     description:
       "Membuat desain antarmuka website yang modern, responsif, dan nyaman digunakan pada berbagai perangkat.",
-    year: "2024",
+    year: "2025",
   },
   {
     title: "Web Developer",
@@ -41,7 +41,7 @@ export default function Achievement() {
 ];
 
   return (
-    <section className=" bg-[#434537] py-24 px-6 text-white relative overflow-hidden -mt-1">
+    <section className=" bg-[#434537] py-24 px-6 text-white relative overflow-hidden ">
       {/* Background Blur */}
       {/* <div className="absolute top-0 left-0 w-72 h-72 bg-white/5 blur-3xl rounded-full" />
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-white/5 blur-3xl rounded-full" /> */}
