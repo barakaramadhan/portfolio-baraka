@@ -1,76 +1,111 @@
-import React from 'react';
-import Design from "../Assets/img/design.png";
-import Tailwind from "../Assets/img/tailwind.png";
-import ReactLogo from "../Assets/img/reactLogo.png";
-import CssLogo from "../Assets/img/cssLogo.png";
-import HtmlLogo from "../Assets/img/htmlLogo.png";
+import { useState } from "react";
+import {
+  FaReact,
+  FaFigma,
+  FaGitAlt,
+  FaHtml5,
+} from "react-icons/fa";
 
-// Data skill
-const skillData = [
-  { name: 'TAILWIND', logo: Tailwind, width: 'h-[45px]' },
-  { name: 'FIGMA', logo: Design, width: 'w-[45px] h-[45px]' },
-  { name: 'REACT', logo: ReactLogo, width: 'w-[45px] h-[45px]' },
-  { name: 'CSS', logo: CssLogo, width: 'w-[45px] h-[45px]' },
-  { name: 'HTML', logo: HtmlLogo, width: 'w-[45px] h-[45px]' },
+const skills = [
+  {
+    icon: <FaReact size={28} />,
+    title: "Frontend Development",
+    desc: "Membangun website modern, responsive, dan interaktif menggunakan React, Tailwind CSS, dan JavaScript.",
+    isActive: true,
+  },
+  {
+    icon: <FaFigma size={28} />,
+    title: "UI/UX Design",
+    desc: "Mendesain tampilan yang clean, modern, dan nyaman digunakan dengan fokus pada user experience.",
+    isActive: false,
+  },
+  {
+    icon: <FaGitAlt size={28} />,
+    title: "Git & Github",
+    desc: "Mengelola project menggunakan version control, workflow Git, dan kolaborasi repository Github.",
+    isActive: false,
+  },
+  {
+    icon: <FaHtml5 size={28} />,
+    title: "Responsive Website",
+    desc: "Membuat tampilan website yang fleksibel dan optimal di desktop maupun mobile device.",
+    isActive: false,
+  },
 ];
 
-export default function Skil() {
+export default function Skill() {
   return (
-    <div className="bg-[#D1CBB2] text-white py-[80px] px-4">
+    <section id="Skill" className="bg-[#D1CBB2] text-white py-16 px-6 md:px-16 lg:px-24 font-sans">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+       {/* Kiri: Judul dan Deskripsi */}
+<div className="lg:col-span-4 space-y-6 pt-4 text-center lg:text-left">
+  
+  <h2 className="text-[40px] md:text-[60px] font-bebas  tracking-wide text-[#514E3D]">
+    KEAHLIAN SAYA
+  </h2>
 
-      {/* JUDUL */}
-      <h1 className="text-center text-[50px] sm:text-[40px] md:text-[80px] font-bebas text-[#514E3D]">
-       <span className='bg-[#FE8425] px-2 py-0.5 text-white'>KEAHLIAN</span> SAYA
-      </h1>
+  <p className="text-[#514E3D] text-sm md:text-[17px] leading-relaxed font-poppins">
+    Saya fokus membuat tampilan website yang modern,
+    responsive, dan nyaman digunakan dengan menggabungkan
+    desain UI/UX serta frontend development.
+  </p>
 
-      <p className="text-center text-black font-poppins max-w-[700px] mx-auto mt-3 text-[15px] sm:text-[15px] md:text-[16px] leading-relaxed">
-       Gua nguasain beberapa tools dan teknologi yang bikin proses desain & ngoding jadi lebih cepat dan rapi.
-      </p>
-
-      <div className="flex flex-col items-center md:flex-row md:justify-center gap-10 mt-[60px]">
-
-        {/* TEXT SKILLS — RESPONSIVE */}
-        <div className="flex items-center -mt-[50px] sm:-mt-[50px] md:-mt-[50px] lg:-mt-[50px] xl:-mt-[50px]">
-        </div>
-
-        {/* GRID RESPONSIVE */}
-        <div
-          className="
-            grid
-            grid-cols-2
-            sm:grid-cols-3
-            md:grid-cols-3
-            lg:grid-cols-4
-            xl:grid-cols-5
-            gap-6 sm:gap-8 md:gap-10
-          "
-        >
-          {skillData.map((skill, index) => (
+  <div className="pt-2">
+    <a href="#Contact">
+      <button className="px-6 py-3 rounded-xl text-sm md:text-base font-medium bg-[#FE8425] text-white hover:scale-105 hover:bg-[#ff933f] transition-all duration-300 shadow-lg">
+        Let's Work Together
+      </button>
+    </a>
+  </div>
+</div>
+        {/* Kanan: Grid Kartu Skill */}
+        <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 lg:pt-0">
+          {skills.map((skill, index) => (
             <div
               key={index}
-              className="
-                bg-[#191C0C]
-                w-[130px] h-[130px]
-                sm:w-[150px] sm:h-[150px]
-                md:w-[170px] md:h-[170px]
-                lg:w-[190px] lg:h-[190px]
-                rounded-2xl shadow-xl
-                flex flex-col justify-center items-center
-                hover:scale-105 transition duration-300
-              "
+              className={`p-8 rounded-3xl transform transition-all duration-500 ease-out flex flex-col justify-between min-h-[240px] cursor-pointer
+                md:hover:-rotate-2 md:hover:-translate-y-3 md:hover:shadow-2xl ${
+                skill.isActive
+                  ? "bg-[#514E3D] text-white shadow-lg"
+                  : "bg-[#191C0C] text-white hover:bg-[#514E3D]"
+              }`}
             >
-              <img
-                src={skill.logo}
-                alt={skill.name}
-                className={`${skill.width}`}
-              />
-              <h1 className="text-[20px] font-bebas sm:text-[18px] md:text-[30px] mt-3 tracking-wide">
-                {skill.name}
-              </h1>
+              <div className="space-y-4">
+
+                {/* Bagian Icon */}
+                <div
+                  className={`${
+                    skill.isActive
+                      ? "text-white"
+                      : "text-[#FE8425]"
+                  }`}
+                >
+                  {skill.icon}
+                </div>
+                
+                {/* Judul & Deskripsi */}
+                <h3 className="text-xl font-semibold tracking-wide font-poppins">
+                  {skill.title}
+                </h3>
+
+                <p
+                  className={`text-sm leading-relaxed font-poppins ${
+                    skill.isActive
+                      ? "text-white"
+                      : "text-white"
+                  }`}
+                >
+                  {skill.desc}
+                </p>
+              </div>
+
+             
             </div>
           ))}
         </div>
+
       </div>
-    </div>
+    </section>
   );
 }

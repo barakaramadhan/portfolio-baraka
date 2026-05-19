@@ -103,58 +103,61 @@ export default function Project() {
       <div className="max-w-5xl mx-auto space-y-12">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-          <div className="space-y-3 max-w-2xl">
-            <h2 className="text-3xl md:text-[60px] font-semibold tracking-wide text-white">
-              PROJECT SAYA
-            </h2>
+     {/* Mengubah pt-5 (mobile) agar tidak terlalu jauh, dan md:pt-12 saat layar desktop */}
+<div className="flex flex-col items-center text-center md:flex-row md:items-end md:justify-between md:text-left gap-6 pt-4 md:pt-12">
+  <div className="space-y-3 max-w-2xl">
+    <h2 className="text-[40px] md:text-[60px] font-semibold tracking-wide text-white font-bebas">
+      PROJECT SAYA
+    </h2>
 
-            <p className="text-white/80 text-sm md:text-base leading-relaxed">
-              Kumpulan project yang saya kerjakan pada akhir-akhir ini
-            </p>
-          </div>
+    {/* Deskripsi baru yang lebih panjang dan profesional */}
+    <p className="text-white/80 text-sm md:text-base leading-relaxed font-poppins text-[16px]">
+      Berikut adalah beberapa proyek yang saya kerjakan. Setiap proyek ini
+      merupakan hasil dari pengalaman dan pengetahuan teknis yang saya miliki.
+    </p>
+  </div>
 
-          {/* Button */}
-          <div className="flex items-center space-x-3">
-            <button
-              onClick={handlePrev}
-              className="p-3 bg-slate-900 hover:bg-slate-800 rounded-xl border border-slate-800 transition"
-            >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </button>
+  {/* Button */}
+  <div className="flex items-center space-x-3">
+    <button
+      onClick={handlePrev}
+      className="p-3 bg-[#FE8425] hover:bg-[#ff6600] rounded-xl border border-[#FE8425] transition"
+    >
+      <svg
+        className="w-5 h-5"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M15 19l-7-7 7-7"
+        />
+      </svg>
+    </button>
 
-            <button
-              onClick={handleNext}
-              className="p-3 bg-slate-900 hover:bg-slate-800 rounded-xl border border-slate-800 transition"
-            >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
+    <button
+      onClick={handleNext}
+      className="p-3 bg-[#FE8425] hover:bg-[#ff6600] rounded-xl border border-[#FE8425] transition"
+    >
+      <svg
+        className="w-5 h-5"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M9 5l7 7-7 7"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
 
         {/* Slider */}
         <div
@@ -174,7 +177,7 @@ export default function Project() {
                 key={index}
                 className="w-full flex-shrink-0 px-1"
               >
-                <div className="bg-[#09090b] border border-slate-900 rounded-2xl overflow-hidden grid md:grid-cols-12 md:h-[450px]">
+                <div className="bg-[#191C0C]  rounded-2xl overflow-hidden grid md:grid-cols-12 md:h-[450px]">
 
                   {/* Image */}
                   <div className="md:col-span-7 h-[240px] md:h-full overflow-hidden relative">
@@ -194,23 +197,23 @@ export default function Project() {
                   {/* Content */}
                   <div className="md:col-span-5 p-8 flex flex-col justify-between bg-black/20">
                     <div className="space-y-4">
-                      <h3 className="text-2xl font-semibold">
+                      <h3 className="text-[50px] font-bebas ">
                         {project.title}
                       </h3>
 
-                      <p className="text-sm text-slate-400 leading-relaxed">
+                      <p className="text-sm text-white/80 leading-relaxed font-poppins ">
                         {project.desc}
                       </p>
                     </div>
 
-                    <div className="space-y-5 pt-6 border-t border-slate-800">
+                    <div className="space-y-5 pt-6 border-t border-white">
                       
                       {/* Tech */}
                       <div className="flex flex-wrap gap-2">
                         {project.tech.map((tech, idx) => (
                           <span
                             key={idx}
-                            className="text-[10px] font-mono bg-slate-900 px-2 py-1 rounded text-slate-400"
+                            className="text-[11px] font-poppins bg-[#FE8425] px-2 py-1 rounded text-white "
                           >
                             {tech}
                           </span>
@@ -219,7 +222,7 @@ export default function Project() {
 
                       {/* Link */}
                       <div className="flex items-center justify-between">
-                        <span className="text-[10px] uppercase tracking-widest text-slate-500">
+                        <span className="text-[11px] uppercase tracking-widest text-white/80 font-poppins">
                           Live Preview
                         </span>
 
