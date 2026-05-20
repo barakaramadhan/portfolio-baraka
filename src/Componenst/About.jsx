@@ -1,4 +1,4 @@
-import Badoon from "../Assets/img/badoon.png";
+import Foto from "../Assets/img/foto.png";
 import {
   FaInstagram,
   FaLinkedin,
@@ -14,11 +14,11 @@ export default function About() {
       <div className="md:flex md:items-center ">
         
         {/* img about */}
-        <div>
+        <div className="ml-[250px] flex justify-center items-center">
           <img
-            src={Badoon}
+            src={Foto}
             alt=""
-            className="w-[600px] max-sm:hidden"
+            className="w-[400px] max-sm:hidden "
           />
         </div>
 

@@ -5,6 +5,9 @@ import TokoRoti from "../Assets/img/roti.png";
 import Eid from "../Assets/img/mubarok.png";
 import Cuaca from "../Assets/img/cuaca.png";
 import Webs from "../Assets/img/webs.png";
+import Ducati from "../Assets/img/ducati.png";
+import Furniture from "../Assets/img/adz-furniture.png";
+import Quranku from "../Assets/img/quranku.png";
 
 export default function Project() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -56,8 +59,34 @@ export default function Project() {
       accentColor: "bg-sky-500",
       img: Cuaca,
     },
+    {
+      title: "ADZ Furniture",
+      desc: "Katalog online interaktif untuk menampilkan koleksi furnitur premium dengan tata letak modern dan estetika minimalis.",
+      link: "https://adz-furniture.vercel.app/", 
+      tag: "Company Profile",
+      tech: ["React", "Tailwind CSS", "Framer Motion"],
+      accentColor: "bg-amber-700",
+      img: Furniture,
+    },
+    {
+      title: "Ducati Showcase",
+      desc: "Landing page otomotif berperforma tinggi dengan fokus pada visualiasasi produk yang elegan dan animasi transisi yang halus.",
+      link: "https://ducati-kalcer.vercel.app/", 
+      tag: "Landing Page",
+      tech: ["React", "Tailwind CSS", "Vite"],
+      accentColor: "bg-red-600",
+      img: Ducati,
+    },
+    {
+      title: "Quranku",
+      desc: "Aplikasi Al-Quran digital berbasis web yang responsif, dilengkapi dengan fitur pencarian ayat dan pembacaan yang nyaman di berbagai perangkat.",
+      link: "https://quran-digital-nu.vercel.app/", 
+      tag: "Web Application",
+      tech: ["React", "Tailwind CSS", "Quran API"],
+      accentColor: "bg-teal-600",
+      img: Quranku,
+    },
   ];
-
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
   };
